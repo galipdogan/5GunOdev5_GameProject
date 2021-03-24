@@ -38,9 +38,6 @@ namespace _5GunOdev5_GameProject.Concrete
             Console.WriteLine("Oyuncu Silindi..." + gamer.FirstName);
         }
 
-        public bool CheckIfRealPerson(Gamer gamer)
-        {
-            throw new NotImplementedException();
-        }
+        
     }
 }

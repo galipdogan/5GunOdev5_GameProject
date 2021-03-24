@@ -14,7 +14,7 @@ namespace _5GunOdev5_GameProject
             //Yeni Oyuncu tanımlama
             Gamer gamer1 = new Gamer
             {
-                Id = 1, FirstName = "Galip", LastName = "Doğan", NationalityId = "11111111111",
+                Id = 1, FirstName = "Galip", LastName = "Doğan", NationalityId = 11111111111,
                 BirthDay = new DateTime(1986, 11, 4)
             };
             //Yeni Oyuncu Ekleme
