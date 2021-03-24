@@ -6,7 +6,7 @@ using _5GunOdev5_GameProject.Entities;
 
 namespace _5GunOdev5_GameProject.Concrete
 {
-    class CampaignManager
+    public class CampaignManager:ICampaignService
     {
         public void Add(Campaign campaign)
         {

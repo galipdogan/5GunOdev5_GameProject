@@ -7,20 +7,10 @@ namespace _5GunOdev5_GameProject.Abstract
 {
    public interface IGameService
    {
-       public void Add(Game game)
-       {
-           Console.WriteLine("Yeni Oyun Eklendi : " + game.GameName);
-        }
+       public void Add(Game game);
+       public void Update(Game game);
+       public void Delete(Game game);
 
-       public void Update(Game game)
-       {
-           Console.WriteLine("Oyun Güncelle : " + game.GameName);
-        }
-
-       public void Delete(Game game)
-       {
-           Console.WriteLine("Oyun Silindi : " + game.GameName);
-        }
 
 
    }

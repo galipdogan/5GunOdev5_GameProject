@@ -9,14 +9,16 @@ namespace _5GunOdev5_GameProject
     {
         static void Main(string[] args)
         {
+            GamerManager gamerManager = new GamerManager(new GamerCheckManager());
+
             //Yeni Oyuncu tanımlama
             Gamer gamer1 = new Gamer
             {
                 Id = 1, FirstName = "Galip", LastName = "Doğan", NationalityId = "11111111111",
                 BirthDay = new DateTime(1986, 11, 4)
             };
+            //Yeni Oyuncu Ekleme
 
-            GamerManager gamerManager = new GamerManager();
             gamerManager.Add(gamer1);
 
             //Yeni Oyun tanımlama
@@ -28,8 +30,7 @@ namespace _5GunOdev5_GameProject
             Campaign campaign1 = new Campaign();
             campaign1.CampaignName = "Yeni Kampanya";
             campaign1.CapmpaignDiscount = 25;
-
-
+            
             //Oyun Ekleme
             GameManager gameManager = new GameManager();
             gameManager.Add(game1);
@@ -37,11 +38,12 @@ namespace _5GunOdev5_GameProject
             //Kampanya Ekleme
             CampaignManager campaignManager = new CampaignManager();
             campaignManager.Add(campaign1);
-            
 
             //Satış yapıldı
             SalesManager salesManager = new SalesManager();
             salesManager.Add(gamer1,game1,campaign1);
+
+
 
 
 

@@ -6,7 +6,7 @@ using _5GunOdev5_GameProject.Entities;
 
 namespace _5GunOdev5_GameProject.Concrete
 {
-    class GameManager
+    public class GameManager : IGameService
     {
 
         public void Add(Game game)

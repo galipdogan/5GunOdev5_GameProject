@@ -6,7 +6,7 @@ using _5GunOdev5_GameProject.Entities;
 
 namespace _5GunOdev5_GameProject.Concrete
 {
-    class SalesManager:IEntity
+   public class SalesManager:ISalesService
     {
 		public void Add(Gamer gamer, Game game, Campaign campaign)
         {

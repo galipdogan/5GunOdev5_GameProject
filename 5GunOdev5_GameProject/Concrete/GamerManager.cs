@@ -4,12 +4,28 @@ using _5GunOdev5_GameProject.Entities;
 
 namespace _5GunOdev5_GameProject.Concrete
 {
-  public class GamerManager
+    public class GamerManager : IGamerService
     {
-      
+        private IGamerCheckService _checkService;
+
+        public GamerManager(IGamerCheckService checkService)
+        {
+            _checkService = checkService;
+        }
+
+
         public void Add(Gamer gamer)
         {
-            Console.WriteLine("Oyuncu Kaydedildi..." + gamer.FirstName);
+            if (_checkService.CheckIfRealPerson(gamer))
+            {
+                Console.WriteLine("Oyuncu Eklendi..." + gamer.FirstName);
+            }
+            else
+            {
+                Console.WriteLine("Doğrulama Hatası : " +gamer.FirstName);
+            }
+            
+            
         }
 
         public void Update(Gamer gamer)
@@ -20,6 +36,11 @@ namespace _5GunOdev5_GameProject.Concrete
         public void Delete(Gamer gamer)
         {
             Console.WriteLine("Oyuncu Silindi..." + gamer.FirstName);
+        }
+
+        public bool CheckIfRealPerson(Gamer gamer)
+        {
+            throw new NotImplementedException();
         }
     }
 }
